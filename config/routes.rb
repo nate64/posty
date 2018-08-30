@@ -1,9 +1,16 @@
+# Rails.application.routes.draw do
+  
+#   get 'static_pages/home'
+#   get 'static_pages/about'
+#   resources :notes
+
+# end
+
+
 Rails.application.routes.draw do
-  
+  root 'static_pages#home'
+
+  get '/about', to: 'static_pages#about'
+
   resources :notes
-  
-  # get 'notes/index'
-  # get 'notes/show'
-  # get 'notes/new'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
