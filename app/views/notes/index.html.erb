@@ -1,2 +1,6 @@
-<h1>Notes#index</h1>
-<p>Find me in app/views/notes/index.html.erb</p>
+<h1> Notes </h1>
+<% @notes.each do |note| %>
+  <h2><%= note.title %></h2>
+  <p><%= link_to 'Show Note', note_path(note) %></p>
+  <p><%= link_to 'New Note', new_note_path %></p>
+  <% end %>

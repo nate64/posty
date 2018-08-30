@@ -1,14 +1,15 @@
 class NotesController < ApplicationController
   def index
-    @Notes = note.all
+    @notes = Note.all
   end
 
-    def show
-      @note = Note.find(params[:id])
-    end
+  def show
+    @note = Note.find(params[:id])
+  end
 
   def new
     @note = Note.new
+    #button to new.html.erb
   end
 end
 
